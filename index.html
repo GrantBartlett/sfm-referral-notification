@@ -548,20 +548,21 @@ small {
 }
 
 a {
-    color: #EE3C3C;
+    color: #000;
+    font-weight: bold;
     text-decoration: none;
 }
 
 a:hover {
-    color: #EE3C3C !important;
+    color: #000 !important;
 }
 
 a:active {
-    color: #EE3C3C !important;
+    color: #000 !important;
 }
 
 a:visited {
-    color: #EE3C3C !important;
+    color: #000 !important;
 }
 
 h1 a,
@@ -570,7 +571,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-    color: #EE3C3C;
+    color: #000;
 }
 
 h1 a:active,
@@ -579,7 +580,7 @@ h3 a:active,
 h4 a:active,
 h5 a:active,
 h6 a:active {
-    color: #EE3C3C !important;
+    color: #000 !important;
 }
 
 h1 a:visited,
@@ -588,7 +589,7 @@ h3 a:visited,
 h4 a:visited,
 h5 a:visited,
 h6 a:visited {
-    color: #EE3C3C !important;
+    color: #000 !important;
 }
 
 /* Panels */
@@ -626,7 +627,7 @@ table.large-button td {
     display: block;
     width: auto !important;
     text-align: center;
-    background: #EE3C3C;
+    background: #000;
     border: 1px solid #2284a1;
     color: #ffffff;
     padding: 8px 0;
@@ -680,7 +681,7 @@ table.large-button td a {
 table.button:hover td,
 table.button:visited td,
 table.button:active td {
-    background: #EE3C3C !important;
+    background: #000 !important;
 }
 
 table.button:hover td a,
@@ -694,7 +695,7 @@ table.tiny-button:hover td,
 table.small-button:hover td,
 table.medium-button:hover td,
 table.large-button:hover td {
-    background: #EE3C3C !important;
+    background: #000 !important;
 }
 
 table.button:hover td a,
@@ -995,6 +996,16 @@ body.outlook p {
         }
     }
 
+    .enter-comp a:visited {
+        color: #fff!important;
+    }
+    .enter-comp a:active {
+        color: #fff!important;
+    }
+    .enter-comp a:hover {
+        color: #fff!important;
+    }
+
 </style>
 </head>
 <body>
@@ -1041,7 +1052,6 @@ body.outlook p {
                     </tr>
                 </table>
                 <br>
-
                 <table class="container">
                     <tr>
                         <td>
@@ -1054,16 +1064,29 @@ body.outlook p {
                                         <table class="twelve columns">
                                             <tr>
                                                 <td>
-                                                    <h3>Ahoy {first_name} </h3>
+                                                    <h3 style="margin-bottom:10px;">Hello {first_name}, </h3>
 
-                                                    <p class="lead" style="margin-top:10px;margin-bottom:10px;"> I come from a galaxy far far away, notifying you of this amazing competition.</p>
-                                                    <p>
-                                                        <strong>{my_name}</strong> said there was a great chance of this copy getting updated before going live.  A friend wanted to share this competition with you...
+                                                    <p class="lead" style="margin-top:20px;margin-bottom:20px;">{my_name} has just entered this exclusive competition! </p>
+
+                                                    <p>Want this prize? Don't miss out -
+                                                        <a href="{competition_url}?utm_source=friend_referral&utm_medium=email&utm_campaign=notifyafriend" target="_blank">enter now</a> for your chance to win!
                                                     </p>
                                                     <br>
-                                                    <h2><a href="{competition_url}" target="_blank">{competition_title}</a></h2>
 
-                                                    <div style="margin-top:10px;margin-bottom:10px;clear:both;">
+                                                    <div style="background:#333;" class="enter-comp">
+                                                        <center>
+                                                            <h2 style="font-size: 24px;margin-bottom:0px;margin-top:0px;padding:15px;background:#333;color:#fff;text-align: center">
+                                                                <a href="{competition_url}?utm_source=friend_referral&utm_medium=email&utm_campaign=notifyafriend" target="_blank" style="background: #333;color:#fff;">{competition_title}</a>
+                                                            </h2>
+                                                        </center>
+                                                    </div>
+                                                </td>
+
+                                                <td class="expander"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div style="margin-top:10px;margin-bottom:10px;">
                                                         <a href="{competition_url}?utm_source=friend_referral&utm_medium=email&utm_campaign=notifyafriend" target="_blank">
                                                             <img width="580" height="300" src="{competition_image}">
                                                         </a>
@@ -1073,7 +1096,9 @@ body.outlook p {
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <p>For more exclusive amazing brilliant fantastic glorius darling competitions, visit <a href="http://saudifashionmagazine.com/sfm-plus?utm_source=friend_referral&utm_medium=email&utm_campaign=notifyafriend">SFM Plus</a></p>
+                                                    <p>We've got many more amazing prizes to give away! Visit
+                                                        <a href="http://saudifashionmagazine.com/sfm-plus?utm_source=friend_referral&utm_medium=email&utm_campaign=notifyafriend">SFM Plus</a> now to enter.
+                                                    </p>
                                                 </td>
                                                 <td class="expander"></td>
                                             </tr>
@@ -1083,16 +1108,24 @@ body.outlook p {
                                 </tr>
                             </table>
 
+
                             <table class="row">
                                 <tr>
-                                    <td class="wrapper last">
+                                    <td class="wrapper footer last">
 
                                         <table class="twelve columns">
                                             <tr>
                                                 <td align="center">
                                                     <center>
-                                                        <p style="text-align:center;"><a href="http://saudifashionmagazine.com/terms/competition-terms-and-conditions?utm_source=friend_referral&utm_medium=email&utm_campaign=notifyafriend" target="_blank">Terms</a> |
-                                                            <a href="http://saudifashionmagazine.com?utm_source=friend_referral&utm_medium=email&utm_campaign=notifyafriend" target="_blank">SFM Plus</a></p>
+
+                                                        <p style="text-align:center;font-size:12px;color:#333;width:300px">You received this because a friend entered your email and shared one of our pages. </p>
+
+                                                    </center>
+                                                    <center>
+                                                        <p style="text-align:center;">
+                                                            <a href="http://saudifashionmagazine.com/terms/competition-terms-and-conditions?utm_source=friend_referral&utm_medium=email&utm_campaign=notifyafriend" target="_blank">Terms</a> |
+                                                            <a href="http://saudifashionmagazine.com?utm_source=friend_referral&utm_medium=email&utm_campaign=notifyafriend" target="_blank">SFM Plus</a>
+                                                        </p>
                                                     </center>
                                                 </td>
                                                 <td class="expander"></td>
